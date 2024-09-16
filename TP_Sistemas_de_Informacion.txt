@@ -1,0 +1,56 @@
+CLASES:
+
+- Personal
+- Evento
+- Persona
+- Socios
+- Ticket
+- Disponibilidad
+- Cuota
+- Pago
+- MetodoPago
+
+Atributos:
+
+- Personal:
+  +datosEmpleado: Persona
+  + rol:rol
+  + numeroLegajo: int
+
+- Evento:
+  + nombre: string
+  + actoresPrincipales: string
+  + tipoDeEvento: string
+  + paisDeOrigen: string
+  + añoDeRealizacion: date
+  + director: string
+
+- Persona:
+  + nombre: string
+  + apellido: string
+  + direccion: string
+  + teléfono: int
+  + dni: int
+
+- Socios:
+  + datosCliente: Persona
+  + fechaUltimoPago: date
+
+- Disponibilidad:
+  + cupoMaxPersonas
+  + horario
+
+- Cuota:
+  + socio: Socios
+  + fechaLimite
+
+- Pago:
+  + montoTotal
+  + fechaPago
+
+- MetodoPago:
+  + nombre
+  + descripción 
+
+- Ticket:
+  +
