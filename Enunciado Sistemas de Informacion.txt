@@ -5,3 +5,5 @@ La municipalidad cuenta con un sistema de socios, quienes realizan un aporte men
 Cuando un cliente desea asistir a un evento, acude a la boletería para solicitar las entradas. El boletero verifica si el cliente es socio solicitando su número de documento. Luego, el boletero verifica la disponibilidad de entradas para el evento solicitado. Si aún hay entradas disponibles, realiza el cobro y registra la venta, emitiendo un ticket y entregando las entradas al cliente. Si el cliente es socio y tiene sus cuotas al día, recibe un descuento del 5% en el valor total de las entradas. 
 
 Hola Mundo.
+
+Hola y Adios.
