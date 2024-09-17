@@ -1,59 +1,66 @@
-CLASES:
+Clases:
 
-- Personal
-- Evento
-- Persona
-- Socios
-- Ticket
-- Disponibilidad
-- Cuota
-- Pago
-- MetodoPago
-
+Person
 Atributos:
+nombre: String
+apellido: String
+dirección: String
+teléfono: Int
+dni: Int
 
-- Personal:
-  +datosEmpleado: Persona
-  + rol:rol
-  + numeroLegajo: int
+Personal (hereda de Persona)
+Atributos:
+datosEmpleado: Persona (agregado por herencia)
+rol: String
+numeroLegajo: Int
 
-- Evento:
-  + nombre: string
-  + actoresPrincipales: string
-  + tipoDeEvento: string
-  + paisDeOrigen: string
-  + añoDeRealizacion: date
-  + director: string
+Socio (hereda de Persona)
+Atributos:
+datosCliente: Persona (agregado por herencia)
+fechaUltimoPago: Date
+cuotasAdeudadas: List<Cuota>
 
-- Persona:
-  + nombre: string
-  + apellido: string
-  + direccion: string
-  + teléfono: int
-  + dni: int
+Evento
+Atributos:
+nombre: String
+actoresPrincipales: String
+tipoDeEvento: String
+paisDeOrigen: String
+añoDeRealizacion: Date
+director: String
+disponibilidad: Disponibilidad
+precioEntrada: Float
 
-- Socios:
-  + datosCliente: Persona
-  + fechaUltimoPago: date
+Disponibilidad
+Atributos:
+cupoMaxPersonas: Int
+horario: String
+entradasDisponibles: Int
 
-- Disponibilidad:
-  + cupoMaxPersonas
-  + horario
+Ticket
+Atributos:
+numeroTicket: Int
+socio: Socio
+evento: Evento
+cantidadEntradas: Int
+monto: Float
+descuento: Float
 
-- Cuota:
-  + socio: Socios
-  + fechaLimite
+Cuota
+Atributos:
+socio: Socio
+fechaLimite: Date
+monto: Float
+pagada: Boolean
 
-- Pago:
-  + montoTotal
-  + fechaPago
+Pago
+Atributos:
+socio: Socio
+montoTotal: Float
+fechaPago: Date
+metodoPago: MetodoPago
 
-- MetodoPago:
-  + nombre
-  + descripción 
-
-- Ticket:
-  + prueba
-  + prueba
-  + prueba
-  + hola mundo!!!!
+MetodoPago
+Atributos:
+nombre: String
+descripción: String
