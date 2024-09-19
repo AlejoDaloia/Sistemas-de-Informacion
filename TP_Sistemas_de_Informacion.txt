@@ -1,68 +1,65 @@
-Clases:
+CLASES:
 
-Person
+- Personal
+- Evento
+- SalaDeEvento
+- Persona
+- Socios
+- Ticket
+- Disponibilidad
+- Cuota
+- Pago
+- MetodoPago
+
 Atributos:
-nombre: String
-apellido: String
-dirección: String
-teléfono: Int
-dni: Int
 
-Personal (hereda de Persona)
-Atributos:
-datosEmpleado: Persona (agregado por herencia)
-rol: String
-numeroLogo: int
+- Personal:
+  +datosEmpleado: Persona
+  + rol:rol
+  + numeroLegajo: int
 
-Socio (hereda de Persona)
-Atributos:
-datosCliente: Persona (agregado por herencia)
-fechaUltimoPago: Date
-cuotasAdeudadas: List<Cuota>
+- Evento:
+  + nombre: string
+  + actoresPrincipales: string
+  + tipoDeEvento: string
+  + paisDeOrigen: string
+  + añoDeRealizacion: date
+  + director: string
+- SalaDeEvento:
+  - nombre: String
+  - capacidad: int
+  - ubicacion: String
+  + publicarEvento(Evento evento)
+  + asignarHorario(Evento evento, Horario horario)
+  + definirPrecioEntrada(Evento evento, double precio)
+- Persona:
+  + nombre: string
+  + apellido: string
+  + direccion: string
+  + teléfono: int
+  + dni: int
 
-Evento
-Atributos:
-nombre: String
-actoresPrincipales: String
-tipoDeEvento: String
-paisDeOrigen: String
-añoRealizacion: Date
-director: String
-disponibilidad: Disponibilidad
-precioEntrada: Float
+- Socios:
+  + datosCliente: Persona
+  + fechaUltimoPago: date
 
-Disponibilidad
-Atributos:
-cupoMaxPersonas: Int
-horario: String
-entradasDisponibles: Int
+- Disponibilidad:
+  + cupoMaxPersonas
+  + horario
 
-Ticket
-Atributos:
-numeroTicket: Int
-socio: Socio
-evento: Evento
-cantidadEntradas: Int
-monto: Float
-descuento: Float
+- Cuota:
+  + socio: Socios
+  + fechaLimite
 
-Cuota
-Atributos:
-socio: Socio
-fechaLimite: Date
-monto: Float
-pagada: Boolean
+- Pago:
+  + montoTotal
+  + fechaPago
 
-Pago
-Atributos:
-socio: Socio
-montoTotal: Float
-fechaPago: Date
-metodoPago: MetodoPago
+- MetodoPago:
+  + nombre
+  + descripción 
 
-MetodoPago
-Atributos:
-nombre: String
-descripción: String
-
-
+- Ticket:
+  + prueba
+  + prueba
+  + prueba
